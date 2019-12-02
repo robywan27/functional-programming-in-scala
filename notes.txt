@@ -1,0 +1,4 @@
+Source folder exercises has been excluded from compilation because the files do not conform to the Scala syntax
+(they are simply method stubs not contained in any class or object) and would halt any run attempt.
+
+Go see: Settings (Ctrl+Alt+S) -> Build, Execution, Deployment -> Compiler -> excludes
