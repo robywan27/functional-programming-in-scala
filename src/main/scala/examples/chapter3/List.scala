@@ -39,21 +39,18 @@ object List {
     else Cons(as.head, apply(as.tail: _*))
 
 
-  // Exercise  3.2
   def tail[A](l: List[A]): List[A] =
     l match {
       case Nil => sys.error("cannot take tail of empty list")
       case Cons(_, xs) => xs
     }
 
-  // Exercise  3.3
   def setHead[A](l: List[A], y: A): List[A] =
     l match {
       case Nil => sys.error("cannot modify head of empty list")
       case Cons(_, xs) => Cons(y, xs)
     }
 
-  // Exercise  3.4
   @scala.annotation.tailrec
   def drop[A](l: List[A], n: Int): List[A] =
     if (n <= 0)   l
@@ -62,7 +59,6 @@ object List {
       case Cons(_, xs) => drop(xs, n - 1)
     }
 
-  // Exercise  3.5
   @scala.annotation.tailrec
   def dropWhile[A](l: List[A], p: A => Boolean): List[A] =
     l match {
@@ -77,7 +73,6 @@ object List {
       case Cons(x, xs) => Cons(x, append(xs, m))
     }
 
-  // Exercise  3.6
   def init[A](l: List[A]): List[A] =
     l match {
       case Nil => sys.error("cannot take init of empty list")
@@ -100,11 +95,9 @@ object List {
   def productR(ds: List[Double]): Double =
     foldRight(ds, 1.0)(_ * _)   // short-hand when types can be inferred and parameters are mentioned only once in the function body
 
-  // Exercise  3.9
   def length[A](l: List[A]): Int =
     foldRight(l, 0)((_, acc) => 1 + acc)
 
-  // Exercise  3.10
   @scala.annotation.tailrec
   def foldLeft[A, B](as: List[A], v: B)(f: (B, A) => B): B =
     as match {
@@ -112,7 +105,6 @@ object List {
       case Cons(x, xs) => foldLeft(xs, f(v, x))(f)
     }
 
-  // Exercise  3.11
   def sumL(ns: List[Int]): Int =
     foldLeft(ns, 0)(_ + _)
   def productL(ds: List[Double]): Double =
@@ -126,25 +118,20 @@ object List {
 
   // Exercise  3.13
 
-  // Exercise  3.14
   def appendRL[A](l: List[A], m: List[A]): List[A] =
     foldRight(l, m)(Cons(_, _))
 
   // Exercise  3.15
 
-  // Exercise  3.16
   def increment(l: List[Int]): List[Int] =
     foldRight(l, Nil: List[Int])((x, acc) => Cons(1 + x, acc))
 
-  // Exercise  3.17
   def doubleToString(l: List[Double]): List[String] =
     foldRight(l, Nil: List[String])((x, acc) => Cons(x.toString, acc))
 
-  // Exercise  3.18
   def map[A, B](l: List[A])(f: A => B): List[B] =
     foldRight(l, Nil: List[B])((x, acc) => Cons(f(x), acc))
 
-  // Exercise  3.19
   def filter[A](l: List[A])(p: A => Boolean): List[A] =
     foldRight(l, Nil: List[A])((x, acc) => if (p(x)) Cons(x, acc) else acc)
 
@@ -154,7 +141,6 @@ object List {
 
   // Exercise  3.21
 
-  // Exercise  3.22
   def addLists(l: List[Int], m: List[Int]): List[Int] =
     (l, m) match {
       case (Nil, _) => Nil
@@ -162,7 +148,6 @@ object List {
       case (Cons(x, xs), Cons(y, ys)) => Cons(x + y, addLists(xs, ys))
     }
 
-  // Exercise  3,23
   def zipWith[A](l: List[A], m: List[A])(f: (A, A) => A): List[A] =
     (l, m) match {
       case (Nil, _) => Nil
