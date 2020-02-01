@@ -1,4 +1,4 @@
-package examples.chapter3
+package examples.chapter3_functional_data_structures
 
 // abstract interface for defining data type List
   // + is the variance annotation, which means A is a covariant parameter of List

@@ -1,5 +1,5 @@
-import examples.chapter3.List.foldRight
-import examples.chapter3.{Cons, List, Nil}
+import examples.chapter3_functional_data_structures.List.foldRight
+import examples.chapter3_functional_data_structures.{Cons, List, Nil}
 
 def map[A, B](l: List[A])(f: A => B): List[B] =
   foldRight(l, Nil: List[B])((x, acc) => Cons(f(x), acc))

@@ -1,4 +1,4 @@
-import examples.chapter3.{Cons, List, Nil}
+import examples.chapter3_functional_data_structures.{Cons, List, Nil}
 
 @scala.annotation.tailrec
 def dropWhile[A](l: List[A], p: A => Boolean): List[A] =

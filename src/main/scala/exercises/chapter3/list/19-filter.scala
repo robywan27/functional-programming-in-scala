@@ -1,5 +1,5 @@
-import examples.chapter3.List.foldRight
-import examples.chapter3.{Cons, List, Nil}
+import examples.chapter3_functional_data_structures.List.foldRight
+import examples.chapter3_functional_data_structures.{Cons, List, Nil}
 
 def filter[A](l: List[A])(p: A => Boolean): List[A] =
   foldRight(l, Nil: List[A])((x, acc) => if (p(x)) Cons(x, acc) else acc)

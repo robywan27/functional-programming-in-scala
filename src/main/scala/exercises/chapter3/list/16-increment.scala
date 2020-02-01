@@ -1,5 +1,5 @@
-import examples.chapter3.List.foldRight
-import examples.chapter3.{Cons, List, Nil}
+import examples.chapter3_functional_data_structures.List.foldRight
+import examples.chapter3_functional_data_structures.{Cons, List, Nil}
 
 def increment(l: List[Int]): List[Int] =
   foldRight(l, Nil: List[Int])((x, acc) => Cons(1 + x, acc))

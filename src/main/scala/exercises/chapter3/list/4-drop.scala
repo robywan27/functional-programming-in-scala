@@ -1,5 +1,5 @@
-import examples.chapter3.List.tail
-import examples.chapter3.{Cons, List, Nil}
+import examples.chapter3_functional_data_structures.List.tail
+import examples.chapter3_functional_data_structures.{Cons, List, Nil}
 
 @scala.annotation.tailrec
 def drop[A](l: List[A], n: Int): List[A] =

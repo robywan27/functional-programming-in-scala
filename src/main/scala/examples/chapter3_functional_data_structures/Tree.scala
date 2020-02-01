@@ -1,4 +1,4 @@
-package examples.chapter3
+package examples.chapter3_functional_data_structures
 
 sealed trait Tree[+A]
 case class Leaf[A](value: A) extends Tree[A]

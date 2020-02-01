@@ -1,5 +1,5 @@
-import examples.chapter3.List
-import examples.chapter3.List.foldLeft
+import examples.chapter3_functional_data_structures.List
+import examples.chapter3_functional_data_structures.List.foldLeft
 
 def sumL(ns: List[Int]): Int =
   foldLeft(ns, 0)(_ + _)

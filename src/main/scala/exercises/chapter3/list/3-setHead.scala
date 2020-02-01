@@ -1,4 +1,4 @@
-import examples.chapter3.{Cons, List, Nil}
+import examples.chapter3_functional_data_structures.{Cons, List, Nil}
 
 def setHead[A](l: List[A], y: A): List[A] =
   l match {

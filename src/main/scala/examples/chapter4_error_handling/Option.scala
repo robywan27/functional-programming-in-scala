@@ -1,4 +1,4 @@
-package examples.chapter4
+package examples.chapter4_error_handling
 
 sealed trait Option[+A] {
   // maps the the value in Some

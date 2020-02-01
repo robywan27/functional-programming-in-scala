@@ -1,4 +1,4 @@
-package examples.chapter2
+package examples.chapter2_basic_fp
 
 /**
  * MyModule object module

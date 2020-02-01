@@ -1,4 +1,4 @@
-import examples.chapter4.{None, Option, Some}
+import examples.chapter4_error_handling.{None, Option, Some}
 
 def map[B](f: A => B): Option[B] =
   this match {
