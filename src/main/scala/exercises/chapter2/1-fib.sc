@@ -11,14 +11,3 @@ def fibIter(n: Int): Int = {
 def fibRec(n: Int): Int =
   if (n == 0 || n == 1)   n
   else fibRec(n - 1) + fibRec(n - 2)
-
-// Inelegant but working solution
-def fibIter2(n: Int): Int = {
-  def fibHelper(lastVal: Int, acc: Int, counter: Int): Int = {
-    if (counter == n)   acc
-    else fibHelper(acc, lastVal + acc, counter + 1)
-  }
-
-  if (n == 0 || n == 1)   n
-  else fibHelper(0, 1, 1)
-}
