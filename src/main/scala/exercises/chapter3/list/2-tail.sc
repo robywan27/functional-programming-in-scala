@@ -5,3 +5,7 @@ def tail[A](l: List[A]): List[A] =
     case Nil => sys.error("cannot take tail of empty list")
     case Cons(_, xs) => xs
   }
+
+
+println(tail(List(6, 8, 9, 10, 7)))   // Cons(8, Cons(9, Cons(10, Cons(7, Nil))))
+ println(tail(Nil))                   // error: cannot take tail of empty list

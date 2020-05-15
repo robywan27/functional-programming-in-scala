@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures.{Cons, List, Nil}
+import examples.chapter3_functional_data_structures.{Cons, List}
 
 @scala.annotation.tailrec
 def dropWhile[A](l: List[A], p: A => Boolean): List[A] =
@@ -8,12 +8,4 @@ def dropWhile[A](l: List[A], p: A => Boolean): List[A] =
     case _ => l
   }
 
-// solution without pattern guard
-@scala.annotation.tailrec
-def dropWhile2[A](l: List[A], p: A => Boolean): List[A] =
-  l match {
-    case Nil => Nil
-    case Cons(x, xs) =>
-      if (p(x))   dropWhile2(xs, p)
-      else l
-  }
+println(dropWhile(List(6, 8, 9, 10, 7), (x: Int) => x % 2 == 0))  // Cons(9,Cons(10,Cons(7,Nil)))

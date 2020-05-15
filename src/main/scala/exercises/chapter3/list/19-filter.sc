@@ -1,14 +1,8 @@
-import examples.chapter3_functional_data_structures.List.foldRight
 import examples.chapter3_functional_data_structures.{Cons, List, Nil}
+import List.foldRight
 
 def filter[A](l: List[A])(p: A => Boolean): List[A] =
   foldRight(l, Nil: List[A])((x, acc) => if (p(x)) Cons(x, acc) else acc)
-/*l match {
-  case Nil => Nil
-  case Cons(x, xs) =>
-    if (p(x))   Cons(x, filter(xs)(p))
-    else filter(xs)(p)
-}*/
 
 
 // stack-safe implementation
@@ -26,3 +20,7 @@ def filter2[A](l: List[A])(p: A => Boolean): List[A] = {
   // converting from the standard Scala list to the list we've defined here
   List(buf.toList: _*)
 }
+
+
+
+println(filter(List(4, 6, 8, 3, 1, 6, 5))(_ % 2 != 0))  // Cons(3,Cons(1,Cons(5,Nil)))
