@@ -27,4 +27,4 @@ def init2[A](l: List[A]): List[A] = {
 }
 
 
-println(init(List(1, 2, 3, 4, 5)))  // Cons(1,Cons(2,Cons(3,Cons(4,Nil))))
+init(List(1, 2, 3, 4, 5))  // Cons(1,Cons(2,Cons(3,Cons(4,Nil))))

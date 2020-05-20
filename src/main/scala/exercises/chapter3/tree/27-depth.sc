@@ -8,4 +8,4 @@ def depth[A](t: Tree[A]): Int =
 
 
 val tree: Tree[Int] = Branch(Branch(Leaf(1), Leaf(2)), Branch(Leaf(3), Branch(Leaf(4), Leaf(5))))
-println(depth(tree))    // 4
+depth(tree)    // 4

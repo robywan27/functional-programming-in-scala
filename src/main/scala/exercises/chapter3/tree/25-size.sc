@@ -8,4 +8,4 @@ def size[A](t: Tree[A]): Int =
 
 
 val tree: Tree[Int] = Branch(Branch(Leaf(1), Leaf(2)), Branch(Leaf(3), Branch(Leaf(4), Leaf(5))))
-println(size(tree))     // 9
+size(tree)     // 9

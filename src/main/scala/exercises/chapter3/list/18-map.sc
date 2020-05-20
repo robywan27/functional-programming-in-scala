@@ -23,5 +23,5 @@ def map2[A, B](l: List[A])(f: A => B): List[B] = {
 
 
 
-println(map(List(3, 5, 2, 8, 9))((x) => x * x))   // Cons(9,Cons(25,Cons(4,Cons(64,Cons(81,Nil)))))
-println(map(List(3, 5, 2, 8, 9))(_ * 2))          // Cons(6,Cons(10,Cons(4,Cons(16,Cons(18,Nil)))))
+map(List(3, 5, 2, 8, 9))(x => x * x)   // Cons(9,Cons(25,Cons(4,Cons(64,Cons(81,Nil)))))
+map(List(3, 5, 2, 8, 9))(_ * 2)          // Cons(6,Cons(10,Cons(4,Cons(16,Cons(18,Nil)))))

@@ -7,5 +7,5 @@ def setHead[A](l: List[A], y: A): List[A] =
   }
 
 val xs = List(6, 8, 9, 10, 7)
-println(setHead(xs, 4))   // Cons(4,Cons(8,Cons(9,Cons(10,Cons(7,Nil)))))
-println(xs)   // xs remains unchanged - Cons(6,Cons(8,Cons(9,Cons(10,Cons(7,Nil)))))
+setHead(xs, 4)   // Cons(4,Cons(8,Cons(9,Cons(10,Cons(7,Nil)))))
+xs   // xs remains unchanged - Cons(6,Cons(8,Cons(9,Cons(10,Cons(7,Nil)))))

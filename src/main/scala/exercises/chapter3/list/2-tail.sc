@@ -7,5 +7,5 @@ def tail[A](l: List[A]): List[A] =
   }
 
 
-println(tail(List(6, 8, 9, 10, 7)))   // Cons(8, Cons(9, Cons(10, Cons(7, Nil))))
- println(tail(Nil))                   // error: cannot take tail of empty list
+tail(List(6, 8, 9, 10, 7))   // Cons(8, Cons(9, Cons(10, Cons(7, Nil))))
+tail(Nil)                    // error: cannot take tail of empty list

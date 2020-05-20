@@ -14,4 +14,4 @@ def reverseR[A](l: List[A]): List[A] =
   foldRight(l, List[A]()) ((x, xs) => append(xs, List(x)))
 
 
-println(reverse(List(3, 6, 8, 9, 1)))   // Cons(1,Cons(9,Cons(8,Cons(6,Cons(3,Nil)))))
+reverse(List(3, 6, 8, 9, 1))   // Cons(1,Cons(9,Cons(8,Cons(6,Cons(3,Nil)))))

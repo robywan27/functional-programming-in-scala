@@ -8,4 +8,4 @@ def dropWhile[A](l: List[A], p: A => Boolean): List[A] =
     case _ => l
   }
 
-println(dropWhile(List(6, 8, 9, 10, 7), (x: Int) => x % 2 == 0))  // Cons(9,Cons(10,Cons(7,Nil)))
+dropWhile(List(6, 8, 9, 10, 7), (x: Int) => x % 2 == 0)  // Cons(9,Cons(10,Cons(7,Nil)))

@@ -1,8 +1,9 @@
 import examples.chapter3_functional_data_structures._
-import List.{append, flatMap, foldRight}
+import List.flatMap
 
-def flatMap[A,B](as: List[A])(f: A => List[B]): List[B] =
-  foldRight(as, List[B]()) ((x, xs) => append(f(x), xs))
+def filterWithFlatMap[A](l: List[A])(p: A => Boolean): List[A] =
+  flatMap(l)(x => if (p(x)) List(x) else Nil)
 
-def filter[A](l: List[A])(p: A => Boolean): List[A] =
-   foldRight(l, Nil: List[A])((x, acc) => if (p(x)) Cons(x, acc) else acc)
+
+
+filterWithFlatMap(List(4, 6, 8, 3, 1, 6, 5))(_ % 2 != 0)  // Cons(3,Cons(1,Cons(5,Nil)))

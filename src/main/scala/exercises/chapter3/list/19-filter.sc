@@ -23,4 +23,4 @@ def filter2[A](l: List[A])(p: A => Boolean): List[A] = {
 
 
 
-println(filter(List(4, 6, 8, 3, 1, 6, 5))(_ % 2 != 0))  // Cons(3,Cons(1,Cons(5,Nil)))
+filter(List(4, 6, 8, 3, 1, 6, 5))(_ % 2 != 0)  // Cons(3,Cons(1,Cons(5,Nil)))

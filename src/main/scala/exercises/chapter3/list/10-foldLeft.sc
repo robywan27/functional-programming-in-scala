@@ -8,4 +8,4 @@ def foldLeft[A, B](as: List[A], v: B)(f: (B, A) => B): B =
   }
 
 
-println(foldLeft(List(1, 2, 3), 0)(_ + _))    // 6
+foldLeft(List(1, 2, 3), 0)(_ + _)    // 6

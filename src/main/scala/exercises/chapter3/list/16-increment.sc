@@ -5,4 +5,4 @@ def increment(l: List[Int]): List[Int] =
   foldRight(l, Nil: List[Int])((x, acc) => Cons(1 + x, acc))
 
 
-println(increment(List(4, 2, 1)))   // Cons(5,Cons(3,Cons(2,Nil)))
+increment(List(4, 2, 1))   // Cons(5,Cons(3,Cons(2,Nil)))

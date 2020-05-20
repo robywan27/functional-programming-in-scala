@@ -9,6 +9,6 @@ def lengthL[A](l: List[A]): Int =
   foldLeft(l, 0)((acc, _) => acc + 1)
 
 
-println(sumL(List(2, 2, 2)))      // 6
-println(productL(List(2, 2, 2)))  // 8.0
-println(lengthL(List(2, 2, 2)))   // 3
+sumL(List(2, 2, 2))      // 6
+productL(List(2, 2, 2))  // 8.0
+lengthL(List(2, 2, 2))   // 3

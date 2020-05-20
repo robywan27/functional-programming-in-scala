@@ -70,11 +70,11 @@ object List {
       case Cons(x, xs) => f(x, foldRight(xs, v)(f))
     }
 
-  /*def sumWithFoldRight(ns: List[Int]): Int =
+  def sumWithFoldRight(ns: List[Int]): Int =
     foldRight(ns, 0)((x, y) => x + y)
 
   def productWithFoldRight(ds: List[Double]): Double =
-    foldRight(ds, 1.0)(_ * _)*/
+    foldRight(ds, 1.0)(_ * _)
 
   def length[A](l: List[A]): Int =
     foldRight(l, 0)((_, acc) => 1 + acc)
@@ -86,20 +86,23 @@ object List {
       case Cons(x, xs) => foldLeft(xs, f(v, x))(f)
     }
 
-  /*def sumWithFoldLeft(ns: List[Int]): Int =
+  def sumWithFoldLeft(ns: List[Int]): Int =
     foldLeft(ns, 0)(_ + _)
 
   def productWithFoldLeft(ds: List[Double]): Double =
     foldLeft(ds, 1.0)(_ * _)
 
   def lengthWithFoldLeft[A](l: List[A]): Int =
-    foldLeft(l, 0)((acc, _) => acc + 1)*/
+    foldLeft(l, 0)((acc, _) => acc + 1)
 
   def reverse[A](l: List[A]): List[A] =
     foldLeft(l, List[A]())((xs, x) => Cons(x, xs))
 
   def appendWithFold[A](l: List[A], m: List[A]): List[A] =
     foldRight(l, m)(Cons(_, _))
+
+  def concat[A](xss: List[List[A]]): List[A] =
+    foldRight(xss, List[A]()) (append)
 
   def increment(l: List[Int]): List[Int] =
     foldRight(l, Nil: List[Int])((x, acc) => Cons(1 + x, acc))
@@ -116,6 +119,9 @@ object List {
   def flatMap[A, B](as: List[A])(f: A => List[B]): List[B] =
     foldRight(as, List[B]())((x, xs) => append(f(x), xs))
 
+  def filterWithFlatMap[A](l: List[A])(p: A => Boolean): List[A] =
+    flatMap(l)(x => if (p(x)) List(x) else Nil)
+
   def addLists(l: List[Int], m: List[Int]): List[Int] =
     (l, m) match {
       case (Nil, _) => Nil
@@ -129,4 +135,20 @@ object List {
       case (_, Nil) => Nil
       case (Cons(x, xs), Cons(y, ys)) => Cons(f(x, y), zipWith(xs, ys)(f))
     }
+
+  @scala.annotation.tailrec
+  def hasSubsequence[A](sup: List[A], sub: List[A]): Boolean = {
+    @scala.annotation.tailrec
+    def startsWith(sup: List[A], sub: List[A]): Boolean =
+      (sup, sub) match {
+        case (_, Nil) => true
+        case (Cons(x, xs), Cons(y, ys)) if x == y => startsWith(xs, ys)
+        case _ => false
+      }
+    sup match {
+      case Nil => sub == Nil
+      case Cons(x, xs) if startsWith(Cons(x, xs), sub) => true
+      case Cons(_, xs) => hasSubsequence(xs, sub)
+    }
+  }
 }

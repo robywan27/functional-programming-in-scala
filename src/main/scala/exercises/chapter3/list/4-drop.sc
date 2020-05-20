@@ -9,4 +9,4 @@ def drop[A](l: List[A], n: Int): List[A] =
   }
 
 
-println(drop(List(1, 2, 3, 4, 5, 6), 3))    // Cons(4,Cons(5,Cons(6,Nil)))
+drop(List(1, 2, 3, 4, 5, 6), 3)    // Cons(4,Cons(5,Cons(6,Nil)))

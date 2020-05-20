@@ -5,4 +5,4 @@ def doubleToString(l: List[Double]): List[String] =
   foldRight(l, Nil: List[String])((x, acc) => Cons(x.toString, acc))
 
 
-println(doubleToString(List(1.2, 3.4, 5.6)))    // Cons(1.2,Cons(3.4,Cons(5.6,Nil)))
+doubleToString(List(1.2, 3.4, 5.6))    // Cons(1.2,Cons(3.4,Cons(5.6,Nil)))

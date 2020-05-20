@@ -8,4 +8,4 @@ def maximum(t: Tree[Int]): Int =
 
 
 val tree: Tree[Int] = Branch(Branch(Leaf(1), Leaf(5)), Branch(Leaf(3), Branch(Leaf(4), Leaf(2))))
-println(maximum(tree))    // 5
+maximum(tree)    // 5

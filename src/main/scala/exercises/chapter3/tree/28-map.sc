@@ -8,4 +8,4 @@ def map[A, B](t: Tree[A])(f: A => B): Tree[B] =
 
 
 val tree: Tree[Int] = Branch(Branch(Leaf(1), Leaf(5)), Branch(Leaf(3), Branch(Leaf(4), Leaf(2))))
-println(map(tree)(_ + 1))   // Branch(Branch(Leaf(2),Leaf(6)),Branch(Leaf(4),Branch(Leaf(5),Leaf(3))))
+map(tree)(_ + 1)   // Branch(Branch(Leaf(2),Leaf(6)),Branch(Leaf(4),Branch(Leaf(5),Leaf(3))))

@@ -5,4 +5,4 @@ def length[A](l: List[A]): Int =
   foldRight(l, 0)((_, acc) => 1 + acc)
 
 
-println(length(List(1, 4, 7, 3, 2, 6)))   // 6
+length(List(1, 4, 7, 3, 2, 6))   // 6
