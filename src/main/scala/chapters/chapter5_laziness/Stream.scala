@@ -1,4 +1,4 @@
-package examples.chapter5_laziness
+package chapters.chapter5_laziness
 
 sealed trait Stream[+A] {
   import Stream._

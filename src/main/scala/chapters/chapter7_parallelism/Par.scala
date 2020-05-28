@@ -1,4 +1,4 @@
-package examples.chapter7_parallelism
+package chapters.chapter7_parallelism
 
 import java.util.concurrent.{Callable, ExecutorService, Future, TimeUnit}
 

@@ -1,4 +1,4 @@
-import examples.chapter5_laziness.Stream
+import chapters.chapter5_laziness.Stream
 import Stream._
 
 def unfold[A, S](z: S)(f: S => Option[(A, S)]): Stream[A] =

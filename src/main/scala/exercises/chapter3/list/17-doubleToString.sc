@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures.{Cons, List, Nil}
+import chapters.chapter3_functional_data_structures.{Cons, List, Nil}
 import List.foldRight
 
 def doubleToString(l: List[Double]): List[String] =

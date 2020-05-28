@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures.List
+import chapters.chapter3_functional_data_structures.List
 import List.foldRight
 
 def length[A](l: List[A]): Int =

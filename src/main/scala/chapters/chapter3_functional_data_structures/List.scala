@@ -1,4 +1,4 @@
-package examples.chapter3_functional_data_structures
+package chapters.chapter3_functional_data_structures
 
 sealed trait List[+A]
 case object Nil extends List[Nothing]

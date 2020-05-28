@@ -1,5 +1,5 @@
-import examples.chapter6_state.RNG.Rand
-import examples.chapter6_state.RNG._
+import chapters.chapter6_state.RNG.Rand
+import chapters.chapter6_state.RNG._
 
 def flatMap[A,B](f: Rand[A])(g: A => Rand[B]): Rand[B] =
   rng => {

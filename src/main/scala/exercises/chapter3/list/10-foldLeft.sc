@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures.{Cons, List, Nil}
+import chapters.chapter3_functional_data_structures.{Cons, List, Nil}
 
 @scala.annotation.tailrec
 def foldLeft[A, B](as: List[A], v: B)(f: (B, A) => B): B =

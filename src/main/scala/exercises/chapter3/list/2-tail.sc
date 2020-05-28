@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures.{Cons, List, Nil}
+import chapters.chapter3_functional_data_structures.{Cons, List, Nil}
 
 def tail[A](l: List[A]): List[A] =
   l match {

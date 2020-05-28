@@ -1,4 +1,4 @@
-import examples.chapter4_error_handling._
+import chapters.chapter4_error_handling._
 
 /*case class Person(name: Name, age: Age)
 sealed class Name(val value: String)

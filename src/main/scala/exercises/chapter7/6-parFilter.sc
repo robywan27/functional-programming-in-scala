@@ -1,4 +1,4 @@
-import examples.chapter7_parallelism.Par._
+import chapters.chapter7_parallelism.Par._
 
 def parFilter[A](as: List[A])(f: A => Boolean): Par[List[A]] =
   // This solution is not good because it does not parallelize the logic of the

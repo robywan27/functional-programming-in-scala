@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures._
+import chapters.chapter3_functional_data_structures._
 import List._
 
 def flatMap[A,B](as: List[A])(f: A => List[B]): List[B] =

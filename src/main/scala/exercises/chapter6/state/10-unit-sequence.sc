@@ -1,4 +1,4 @@
-import examples.chapter6_state.State
+import chapters.chapter6_state.State
 
 case class State[S, +A](run: S => (A, S)) {
   def map[B](f: A => B): State[S, B] =

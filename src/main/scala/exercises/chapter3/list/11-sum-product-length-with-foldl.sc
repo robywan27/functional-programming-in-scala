@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures.List
+import chapters.chapter3_functional_data_structures.List
 import List.foldLeft
 
 def sumL(ns: List[Int]): Int =

@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures.{Cons, List}
+import chapters.chapter3_functional_data_structures.{Cons, List}
 import List.foldRight
 
 def appendFold[A](l: List[A], m: List[A]): List[A] =

@@ -1,4 +1,4 @@
-import examples.chapter6_state.RNG
+import chapters.chapter6_state.RNG
 
 def intDouble(rng: RNG): ((Int,Double), RNG) = {
   val (i, r) = rng.nextInt

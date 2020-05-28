@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures.{Cons, List, Nil}
+import chapters.chapter3_functional_data_structures.{Cons, List, Nil}
 
 def addLists(l: List[Int], m: List[Int]): List[Int] =
   (l, m) match {

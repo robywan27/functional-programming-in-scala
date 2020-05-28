@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures.{Cons, List, Nil}
+import chapters.chapter3_functional_data_structures.{Cons, List, Nil}
 import List.foldRight
 
 def filter[A](l: List[A])(p: A => Boolean): List[A] =

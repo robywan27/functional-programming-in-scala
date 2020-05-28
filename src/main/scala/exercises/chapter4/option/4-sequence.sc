@@ -1,4 +1,4 @@
-import examples.chapter4_error_handling._
+import chapters.chapter4_error_handling._
 import Option.map2
 
 def sequence[A](a: List[Option[A]]): Option[List[A]] =

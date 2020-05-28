@@ -1,5 +1,5 @@
-import examples.chapter5_laziness.Stream
-import examples.chapter5_laziness.Stream.cons
+import chapters.chapter5_laziness.Stream
+import chapters.chapter5_laziness.Stream.cons
 
 def constant[A](a: A): Stream[A] = cons(a, constant(a))
   // more efficient

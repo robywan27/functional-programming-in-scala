@@ -1,5 +1,5 @@
-import examples.chapter5_laziness.Stream
-import examples.chapter5_laziness.Stream.cons
+import chapters.chapter5_laziness.Stream
+import chapters.chapter5_laziness.Stream.cons
 
 def from(n: Int): Stream[Int] = cons(n, from(n + 1))
 

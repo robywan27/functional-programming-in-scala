@@ -1,5 +1,5 @@
-import examples.chapter4_error_handling._
-import examples.chapter4_error_handling.Option._
+import chapters.chapter4_error_handling._
+import chapters.chapter4_error_handling.Option._
 
 def variance(xs: Seq[Double]): Option[Double] =
   mean(xs).flatMap(m => mean(xs.map(x => math.pow(x - m, 2))))

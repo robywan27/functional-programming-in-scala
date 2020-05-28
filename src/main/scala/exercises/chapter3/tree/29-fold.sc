@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures.{Branch, Leaf, Tree}
+import chapters.chapter3_functional_data_structures.{Branch, Leaf, Tree}
 
 def fold[A, B](t: Tree[A])(f: A => B)(m: (B, B) => B): B =
   t match {

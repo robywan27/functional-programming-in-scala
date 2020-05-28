@@ -1,4 +1,4 @@
-package examples.chapter4_error_handling
+package chapters.chapter4_error_handling
 
 sealed trait Option[+A] {
   def map[B](f: A => B): Option[B] =

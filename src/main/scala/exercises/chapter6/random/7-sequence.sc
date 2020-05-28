@@ -1,4 +1,4 @@
-import examples.chapter6_state.RNG
+import chapters.chapter6_state.RNG
 
 // quick workaround; worksheet cannot find these inside examples.chapter6_state.RNG
 case class SimpleRNG(seed: Long) extends RNG {

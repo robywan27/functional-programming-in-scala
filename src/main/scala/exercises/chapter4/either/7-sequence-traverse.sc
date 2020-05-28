@@ -1,4 +1,4 @@
-import examples.chapter4_error_handling._
+import chapters.chapter4_error_handling._
 
 def traverse[E, A, B](as: List[A])(f: A => Either[E, B]): Either[E, List[B]] =
   as.foldLeft[Either[E, List[B]]] (Right(Nil)) ((xs, x) => f(x).map2(xs)(_ :: _))

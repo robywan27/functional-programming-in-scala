@@ -1,7 +1,7 @@
 package exercises.chapter6.state
 
-import examples.chapter6_state.State
-import examples.chapter6_state.State._
+import chapters.chapter6_state.State
+import chapters.chapter6_state.State._
 
 sealed trait Input
 case object Coin extends Input

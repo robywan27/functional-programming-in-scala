@@ -1,4 +1,4 @@
-package examples.chapter4_error_handling
+package chapters.chapter4_error_handling
 
 sealed trait Either[+E, +A] {
   def map[B](f: A => B): Either[E, B] =

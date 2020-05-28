@@ -1,4 +1,4 @@
-import examples.chapter6_state.RNG._
+import chapters.chapter6_state.RNG._
 
 def mapUsingFlatMap[A, B](s: Rand[A])(f: A => B): Rand[B] =
   flatMap(s)(a => unit(f(a)))

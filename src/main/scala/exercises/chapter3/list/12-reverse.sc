@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures.{Cons, List}
+import chapters.chapter3_functional_data_structures.{Cons, List}
 import List._
 
 /*

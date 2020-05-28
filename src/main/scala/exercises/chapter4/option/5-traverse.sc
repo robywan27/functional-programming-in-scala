@@ -1,4 +1,4 @@
-import examples.chapter4_error_handling._
+import chapters.chapter4_error_handling._
 import Option._
 
 def traverse[A, B](a: List[A])(f: A => Option[B]): Option[List[B]] =

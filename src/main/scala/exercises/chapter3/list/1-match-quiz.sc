@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures._
+import chapters.chapter3_functional_data_structures._
 import List._
 
 // What will be the result of the following match expression?

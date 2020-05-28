@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures._
+import chapters.chapter3_functional_data_structures._
 import List.flatMap
 
 def filterWithFlatMap[A](l: List[A])(p: A => Boolean): List[A] =

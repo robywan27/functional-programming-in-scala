@@ -1,4 +1,4 @@
-import examples.chapter6_state.RNG
+import chapters.chapter6_state.RNG
 
 def ints(count: Int)(rng: RNG): (List[Int], RNG) = {
   @scala.annotation.tailrec

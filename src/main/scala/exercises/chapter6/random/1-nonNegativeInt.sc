@@ -1,4 +1,4 @@
-import examples.chapter6_state.RNG
+import chapters.chapter6_state.RNG
 
 def nonNegativeInt2(rng: RNG): (Int, RNG) = {
   val (nextInt, nextRng) = rng.nextInt

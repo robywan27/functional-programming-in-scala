@@ -1,4 +1,4 @@
-package examples.chapter6_state
+package chapters.chapter6_state
 
 trait RNG {
   def nextInt: (Int, RNG)

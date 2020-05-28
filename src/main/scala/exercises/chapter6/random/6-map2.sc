@@ -1,4 +1,4 @@
-import examples.chapter6_state.RNG._
+import chapters.chapter6_state.RNG._
 
 def map2[A,B,C](ra: Rand[A], rb: Rand[B])(f: (A, B) => C): Rand[C] =
   rng => {

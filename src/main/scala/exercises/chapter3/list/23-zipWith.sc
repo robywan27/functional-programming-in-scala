@@ -1,4 +1,4 @@
-import examples.chapter3_functional_data_structures.{Cons, List, Nil}
+import chapters.chapter3_functional_data_structures.{Cons, List, Nil}
 
 def zipWith[A](l: List[A], m: List[A])(f: (A, A) => A): List[A] =
   (l, m) match {

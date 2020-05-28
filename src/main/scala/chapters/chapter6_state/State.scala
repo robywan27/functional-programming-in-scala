@@ -1,4 +1,4 @@
-package examples.chapter6_state
+package chapters.chapter6_state
 
 case class State[S, +A](run: S => (A, S)) {
   import State._
