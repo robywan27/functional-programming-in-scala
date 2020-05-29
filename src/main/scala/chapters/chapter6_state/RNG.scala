@@ -25,6 +25,9 @@ object RNG {
     (newInt.toDouble / (Int.MaxValue + 1), newRng)
   }
 
+  def boolean(rng: RNG): (Boolean, RNG) =
+    rng.nextInt match { case (i, rng2) => (i % 2 == 0, rng2) }
+
   def intDouble(rng: RNG): ((Int,Double), RNG) = {
     val (i, r) = rng.nextInt
     val (d, r2) = RNG.double(r)
