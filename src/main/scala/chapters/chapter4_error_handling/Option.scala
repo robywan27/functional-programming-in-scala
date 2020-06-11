@@ -107,7 +107,5 @@ object Option {
     val abs0: Option[Int] => Option[Int] = lift(math.abs)
     println(abs0(Some(-2)))   // Some(2)
     println()
-
-
   }
 }

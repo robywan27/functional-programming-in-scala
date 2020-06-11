@@ -31,6 +31,8 @@ object Prop {
     def isFalsified = true
   }
 
+  def forAll[A](as: Gen[A])(f: A => Boolean): Prop = ???
+
   /*def forAll[A](as: Gen[A])(f: A => Boolean): Prop = Prop {
     (n, rng) => randomStream(as)(rng).zip(Stream.from(0)).take(n).map {
       case (a, i) => try {
